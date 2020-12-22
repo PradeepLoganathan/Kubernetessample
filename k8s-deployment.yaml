@@ -1,0 +1,20 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubeapispoc-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubeapispoc
+  template:
+    metadata:
+      labels:
+        app: kubeapispoc
+    spec:
+      containers:
+        - name: webserver
+          image: pradeepl/kubetest:1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
