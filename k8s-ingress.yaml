@@ -12,5 +12,4 @@ spec:
               service:
                 name: kubeapispoc-service
                 port: 
-                  number: 80
-             
+                  number: 80             
